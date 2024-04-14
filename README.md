@@ -10,7 +10,7 @@
 ### Running Tests
 
 - Run `npm run test:headed` to execute all the tests (total 2 scenarios).
-- Run `npx playwright show-report` to open the execution report.
+- Run `npm run test:report` to open the execution report.
 
 ## Limitations, Issues, and Open Topics:
 
