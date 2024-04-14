@@ -18,6 +18,7 @@ test('Add new vendor and verify vendor details', async ({ page }) => {
     const vendor = VendorUtil.generateVendor();
     await VendorSteps.create(page).addVendor(vendor.name, vendor.contact, vendor.email, vendor.phone);
     await payPage.vendorsTab.search(vendor.name);
+    await expect(payPage.vendorsTab.getVendor(vendor.name)).toBeVisible();
     await payPage.vendorsTab.clickVendor(vendor.name);
 
     await expect(payPage.vendorsTab.vendorPane.businessName).toHaveValue(vendor.name);

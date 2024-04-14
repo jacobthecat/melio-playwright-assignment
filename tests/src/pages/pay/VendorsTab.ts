@@ -21,4 +21,8 @@ export class VendorsTab {
         await this.page.getByRole('link', { name: vendorName }).click();
     }
 
+    getVendor(vendorName: string): Locator {
+        return this.page.getByRole('link', { name: vendorName });
+    }
+
 }
